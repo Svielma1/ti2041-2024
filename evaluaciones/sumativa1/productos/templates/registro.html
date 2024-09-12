@@ -3,9 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <title>Registro</title>
 </head>
 <body>
-    <h1>Registross</h1>
+    <header></header>
+        <h1>Gestión de Productos S.A.</h1>
+    </header>
+    <h3>Registra un producto</h3>
+    <div class="formulario">
+        <form method="POST" action="{% url 'registro' %}">
+            {% csrf_token %}
+            <label for="codigo">Código: </label>
+                <input name="codigo" id="codigo" /><br>
+            <label for="nombre">Nombre:</label>
+                <input name="nombre" id="nombre" /><br>
+            <label for="marca">Marca:</label>
+                <input name="marca" id="marca" /><br>
+            <label for="fecha_ven">Fecha de vencimiento:</label>
+                <input type="date" name="fecha_ven" id="fecha_ven" /><br>
+            <button type="submit">Registrar</button>
+        </form>
+    </div>
 </body>
 </html>

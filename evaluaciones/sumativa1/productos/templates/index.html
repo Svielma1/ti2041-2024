@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Gestión de Productos S.A.</title>
+    <script>
+        function registros() {
+            window.location.href = 'registro/';
+        }
+        function consulta() {
+            window.location.href = 'consulta/';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Gestión de Productos S.A.</h1>
+    </header>
+    <button onclick="registros()">Ir registros</button>
+    <button onclick="consulta()">Ir consultas</button>
+</body>
+</html>

@@ -1,0 +1,18 @@
+body{
+    text-align: center;
+}
+
+.formulario {
+    text-align: center;
+    margin: auto;
+    width: 30rem;
+}
+
+input {
+    width: 50px;
+}
+
+.productos{
+    text-align: start;
+    margin: 0 30rem;
+}
