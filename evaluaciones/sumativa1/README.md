@@ -1,12 +1,12 @@
-#Requisitos
+# Requisitos
 - Python 3.10 en adelante.
 - Django 5.1.
 - Navegador web (Chrome, Firefox, Brave, Etc...).
 - Git.
 
-#Estructura del proyecto
+# Estructura del proyecto
 
-#Instrucciones
+# Instrucciones
 - Clona el repositorio desde Github (git clone https://github.com/Svielma1/ti2041-2024.git).
 - Dirigete a la carpeta del proyecto (cd evaluaciones\sumativa1)
 - Levanta la aplicacion (manage.py runserver)
