@@ -7,6 +7,14 @@
     <link rel="stylesheet" href="{% static 'styles.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <title>Registro</title>
+    <script>
+        function irIndex() {
+            window.location.href = '/productos';
+        }
+        function irConsulta() {
+            window.location.href = '/productos/consulta/';
+        }
+    </script>
 </head>
 <body>
     <header></header>
@@ -26,6 +34,8 @@
                 <input type="date" name="fecha_ven" id="fecha_ven" /><br>
             <button type="submit">Registrar</button>
         </form>
+        <button onclick="irIndex()">Ir inicio</button>
+        <button onclick="irConsulta()">Ir consultas</button>
     </div>
 </body>
 </html>

@@ -1,6 +1,6 @@
 # Requisitos
-- Python 3.10 en adelante.
-- Django 5.1.
+- Python 3.10 o superior.
+- Django 5.1
 - Navegador web (Chrome, Firefox, Brave, Etc...).
 - Git.
 

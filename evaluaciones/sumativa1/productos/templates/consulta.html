@@ -7,6 +7,14 @@
     <link rel="stylesheet" href="{% static 'styles.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <title>Registro</title>
+    <script>
+        function irIndex() {
+            window.location.href = '/productos';
+        }
+        function irRegistro() {
+            window.location.href = '/productos/registro/';
+        }
+    </script>
 </head>
 <body>
     <h1>Gestión de Productos S.A.</h1>
@@ -23,6 +31,8 @@
                 <h3>No hay productos</h3>
             {% endfor %}
         </ul>
+        <button onclick="irIndex()">Ir inicio</button>
+        <button onclick="irRegistro()">Ir registro</button>
     </div>
 </body>
 </html>
