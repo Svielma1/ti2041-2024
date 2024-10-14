@@ -30,7 +30,7 @@ class Product(models.Model):
     characteristics = models.ManyToManyField(Characteristics, through="Data")
 
     def __str__(self):
-        return self.name + "Valor: " + str(self.price)
+        return self.name
 
 class Data(models.Model):
     characteristics = models.ForeignKey(Characteristics, null=False, on_delete=models.CASCADE)
