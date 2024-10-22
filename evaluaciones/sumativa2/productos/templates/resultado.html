@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Registro</title>
+    <script>
+        function irIndex() {
+            window.location.href = '/productos';
+        }
+    </script>
+</head>
+<body>
+    <h1>Gestión de Productos S.A.</h1>
+        {% if mensaje %}
+            <h3>{{ mensaje }}</h3>
+        {% endif %}   
+        <ul>
+            <li>Codigo: {{ producto.code }}</li>
+            <li>Nombre: {{ producto.name }}</li>
+            <li>Precio: {{ producto.price }}</li>
+            <li>Marca: {{ producto.brand }}</li>
+            <li>Categoria: {{ producto.category }}</li>
+        </ul>
+    <button onclick="irIndex()">Ir inicio</button>
+</body>
+</html>

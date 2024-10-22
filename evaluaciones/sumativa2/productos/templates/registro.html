@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+    <title>Registro</title>
+    <script>
+        function irIndex() {
+            window.location.href = '/productos';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Gestión de Productos S.A.</h1>
+    </header>
+    <h3>Registra un producto</h3>
+    <div class="formulario">
+        <form method="POST" action="{% url 'registro' %}">
+            {% csrf_token %}
+            <label for="nombre">Nombre: </label>
+                <input name="nombre" id="nombre" required/><br>
+            <label for="precio">Precio:</label>
+                <input name="precio" id="precio" required/><br>
+            <label for="marca">Marca:</label>
+                <select id="marca" name="marca">
+                    {% for marca in marcas %}
+                        <option value="{{ marca.id_brand }}">{{ marca.name }}</option>
+                    {% endfor %}
+                </select><br>
+            <label for="categoria">Categoria:</label>
+                <select id="categoria" name="categoria">
+                    {% for categoria in categorias %}
+                        <option value="{{ categoria.id_category }}">{{ categoria.name }}</option>
+                    {% endfor %}
+                </select><br>
+            <button type="submit">Registrar</button>
+        </form>
+        <button onclick="irIndex()">Ir inicio</button>
+    </div>
+</body>
+</html>

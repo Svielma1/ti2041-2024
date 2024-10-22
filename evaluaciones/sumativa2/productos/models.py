@@ -17,16 +17,16 @@ class Brand(models.Model):
 
 class Characteristics(models.Model):
     id = models.AutoField(primary_key=True)
-    size = models.IntegerField()
-    weight = models.IntegerField()
-    color = models.CharField(max_length=50)
+    size = models.IntegerField(default=1)
+    weight = models.IntegerField(default=1)
+    color = models.CharField(max_length=50, default="Por definir")
 
 class Product(models.Model):
     code = models.AutoField(primary_key=True)
     name = models.CharField(max_length=100)
     price = models.IntegerField()
-    category = models.ForeignKey(Category, null=True, on_delete=models.CASCADE)
     brand = models.ForeignKey(Brand, null=True, on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, null=True, on_delete=models.CASCADE)
     characteristics = models.ManyToManyField(Characteristics, through="Data")
 
     def __str__(self):
