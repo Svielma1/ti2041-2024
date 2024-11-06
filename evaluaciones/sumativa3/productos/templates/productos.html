@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>Gestión de Productos S.A.</title>
+    <script>
+        function irRegistro() {
+            window.location.href = 'registro/';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Gestión de Productos S.A.</h1>
+    </header>
+    <div class="lista">
+        <h3>Lista de productos</h3>
+        <table>
+            <tr style="background-color: blanchedalmond;">
+                <th>Codigo</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Marca</th>
+                <th>Categoria</th>
+                <td></td>
+            </tr>
+            <tr>
+            {% for product in products %}
+                <td>{{ product.code }}</td>
+                <td>{{ product.name }}</td>
+                <td>{{ product.price }}</td>
+                <td>{{ product.brand }}</td>
+                <td>{{ product.category }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <button onclick="irRegistro()">Ir registro</button>
+</body>
+</html>
