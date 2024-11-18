@@ -8,8 +8,8 @@
 - Clona el repositorio desde Github (git clone https://github.com/Svielma1/ti2041-2024.git).
 - Dirigete a la carpeta del proyecto (cd evaluaciones\sumativa3)
 - Levanta la aplicacion (manage.py runserver)
-- Una vez la aplicacion esta levantada, dirigete en tu navegador a la ruta de la app, http://127.0.0.1:8000
-- Para bajar la aplicacion basta con irse a la terminal y presionar la combinacion de teclas " Ctrl + C"
+- Una vez la aplicacion esta levantada, dirigete en tu navegador a la ruta de la app, http://127.0.0.1:8000 (localhost)
+- Para detener la aplicacion basta con irse a la terminal y presionar la combinacion de teclas " Ctrl + C"
 
 # Medidas de seguridad
 - CSRF: Con este metodo Django se asegura que los datos vengan estrictamente del formulario y no de un tercero que haya intervenido.
@@ -25,7 +25,7 @@
       <button type="submit">Iniciar sesion</button>
   </form>
 
-- XSS: Este metodo evita la injeccion de script malisioso de parte de un tercero.
+- XSS: Este metodo evita la inyección de script malisioso por parte de un tercero.
   
   Ejemplo de uso:
   ```html
