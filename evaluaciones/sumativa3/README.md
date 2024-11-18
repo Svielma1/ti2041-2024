@@ -22,7 +22,7 @@
       <label for="contrasena">Contraseña: </label><br>
           <input type="password" name="contrasena" id="contrasena"/>
       <button type="submit">Iniciar sesion</button>
-  </form>```
+  </form>
 
 - XSS: Este metodo evita la injeccion de script malisioso de parte de un tercero.
   Ejemplo de uso:
@@ -30,6 +30,7 @@
 
 - Errores sensibles: evita mostrar informacion en la consola, amenos que se este ejecutando en 'localhost'.
   Ejemplo de uso:
+  ```python
       *Archivo settings.py*
       DEBUG = False
       ALLOWED_HOSTS = ['localhost']
