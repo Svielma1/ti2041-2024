@@ -12,7 +12,7 @@
 - Para bajar la aplicacion basta con irse a la terminal y presionar la combinacion de teclas " Ctrl + C"
 
 # Medidas de seguridad
-- CSRF: Con este metodo Django se asegura que los datos vengan estrictamente del formualio y no de un tercero que haya intervenido.
+- CSRF: Con este metodo Django se asegura que los datos vengan estrictamente del formulario y no de un tercero que haya intervenido.
   
   Ejemplo de uso:
   ```html
