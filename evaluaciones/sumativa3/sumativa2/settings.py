@@ -110,7 +110,7 @@ TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
@@ -126,3 +126,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
 SESSION_COOKIE_SECURE = True
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'
+
+LOGIN_URL = 'login'
+LOGOUT_REDIRECT_URL = 'login'
+LOGIN_REDIRECT_URL = 'productos'

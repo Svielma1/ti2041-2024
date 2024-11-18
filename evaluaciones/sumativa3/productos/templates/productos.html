@@ -15,10 +15,22 @@
 </head>
 <body>
     <header>
+        <nav>
+            <a href="http://127.0.0.1:8000/admin/">Administracion</a>
+            <a href="{% url 'logout' %}">Cerrar sesión</a>
+        </nav>
         <h1>Gestión de Productos S.A.</h1>
     </header>
     <div class="lista">
         <h3>Lista de productos</h3>
+        <h4>Bienvenido {{ request.session.username }}</h2>
+        <p>Tu fecha de conexión: {{ request.session.login_time }}</p>
+        <p>¿Permisos sobre productos?: 
+            {% if user.is_admin %}
+                Si
+            {% else %}
+                No
+            {% endif %}</p>
         <table>
             <tr style="background-color: blanchedalmond;">
                 <th>Codigo</th>
@@ -39,6 +51,6 @@
             {% endfor %}
         </table>
     </div>
-    <button onclick="irRegistro()">Ir registro</button>
+    <button onclick="irRegistro()">Registrar producto</button>
 </body>
 </html>

@@ -19,7 +19,7 @@ from django.urls import path, include
 from productos import views
 
 urlpatterns = [
-    path("", views.log_in, name="index"),
+    path("", views.log_in, name="login"),
     path('productos/', include('productos.urls')),
     path('admin/', admin.site.urls),
 ]
