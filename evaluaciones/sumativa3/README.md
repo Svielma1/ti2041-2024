@@ -13,6 +13,7 @@
 
 # Medidas de seguridad
 - CSRF: Con este metodo Django se asegura que los datos vengan estrictamente del formualio y no de un tercero que haya intervenido.
+  
   Ejemplo de uso:
   ```html
   <form method="post">
@@ -25,11 +26,13 @@
   </form>
 
 - XSS: Este metodo evita la injeccion de script malisioso de parte de un tercero.
+  
   Ejemplo de uso:
   ```html
     <td>{{ product.code }}</td>```
 
 - Errores sensibles: evita mostrar informacion en la consola, amenos que se este ejecutando en 'localhost'.
+  
   Ejemplo de uso:
   ```python
     #Archivo settings.py
