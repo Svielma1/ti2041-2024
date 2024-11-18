@@ -14,18 +14,18 @@
 # Medidas de seguridad
 - CSRF: Con este metodo Django se asegura que los datos vengan estrictamente del formualio y no de un tercero que haya intervenido.
   Ejemplo de uso:
-      <form method="post">
+      ```<form method="post">
           {% csrf_token %}
           <label for="usuario">Usuario: </label><br>
               <input name="usuario" id="usuario" required/>
           <label for="contrasena">Contraseña: </label><br>
               <input type="password" name="contrasena" id="contrasena"/>
           <button type="submit">Iniciar sesion</button>
-      </form>
+      </form>```
 
 - XSS: Este metodo evita la injeccion de script malisioso de parte de un tercero.
   Ejemplo de uso:
-      <td>{{ product.code }}</td>
+      ```<td>{{ product.code }}</td>```
 
 - Errores sensibles: evita mostrar informacion en la consola, amenos que se este ejecutando en 'localhost'.
   Ejemplo de uso:
