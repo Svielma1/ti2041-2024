@@ -73,7 +73,7 @@ def add_products(request, data: ProductSchema):
         
     )
     product.save()
-    return {"name":product.name}
+    return {"message": product.name + " agregado acorectamente"}
 
 @api.put(path="productos/{code}", auth=auth, tags=["Products"])
 def update_products(request, code: int, data: ProductSchema):
@@ -92,7 +92,7 @@ def update_products(request, code: int, data: ProductSchema):
             continue  
         setattr(product, attr, value)
     product.save()
-    return { "code":product.code, "name":product.name }
+    return { "message": product.name + " editado correctamente" }
 
 @api.delete(path="productos/{code}", auth=auth, tags=["Products"])
 def eliminar_producto(request, code: int):

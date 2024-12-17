@@ -6,7 +6,7 @@ class CrearProductoForm(forms.ModelForm):
         model = Product
         fields = ["name", "price", "brand", "category"]
         labels = {
-            "name": "Nombre del Producto",
+            "name": "Nombre del producto",
             "price": "Precio",
             "brand": "Marca",
             "category": "Categoría",

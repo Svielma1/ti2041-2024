@@ -76,7 +76,7 @@ def registro(request):
         form = CrearProductoForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect(resultado)
+            return redirect(productos)
     else:
         form = CrearProductoForm()
     return render(request, "registro.html", {"form": form})
